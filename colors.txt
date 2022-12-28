@@ -1,0 +1,6 @@
+
+CORES
+
+Blue -- 1f386e
+
+RED -- C62934

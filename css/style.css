@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+:root {
+    --color-Blue: #1f386e;
+    --color-RED: #C62934;
+    --color-WHITE-GREY: rgb(233, 229, 229);
+    --font-padrao: Arial, Helvetica, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-padrao);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#05163b85, #05163b85), url(../assets/Image/intro-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.logo {
+    width: 120px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1.5% 6%;
+    background-color: white;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 12px;
+}
+
+nav ul li > a {
+    text-decoration: none;
+    color: var(--color-Blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+nav ul li a:hover {
+    color: var(--color-RED);
+}
+
+/*------ BOX HEADER -----*/
+.box-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.box-header h1 {
+    font-size: 2.5em;
+    letter-spacing: 1px;
+    line-height: 40px;
+}
+.box-header p {
+    margin: 20px 50px;
+    color: var(--color-WHITE-GREY);
+}
+button {
+    background-color: var(--color-RED);
+    color: white;
+    padding: 10px 30px;
+    outline: none;
+    border: 1px solid var(--color-RED);
+    cursor: pointer;
+    margin: 20px 0;
+}
+.btn-learn-more:hover {
+    border: 1px solid var(--color-Blue);
+    background-color: var(--color-Blue);
+}
+button:active {
+    transform: scale(1.1);
+}
+
+/*----- box-bottom-header -----*/
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.box-bottom-header {
+    width: 100%;
+    background-color: var(--color-Blue);
+    color: var(--color-WHITE-GREY);
+    padding: 20px 6%;
+    font-size: .9em;
+}
+.box-bottom-header p {
+    margin: 10px 0;
+}
+.btn-free-estimate {
+    display: inline-block;
+    color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin-top: 5px;
+    transition-duration: 1s;
+}
+.btn-free-estimate:hover {
+    background-color: var(--color-RED);
+    border: none;
+}
+
+.small-container {
+    width: 80%;
+    margin: auto;
+}
+
+/*---- SECTION ABOUT -----*/
+.about {
+    padding-top: 100px;
+}
+.col-2 {
+    flex-basis: 50%;
+    padding: 10px;
+    min-width: 300px;
+}
+.title {
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: var(--color-RED);
+}
+.col-2 p {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: rgb(75, 70, 70);
+}
+.col-2 h2 {
+    font-size: 1em;
+    font-weight: normal;
+}
+.column ul {
+    list-style-position: inside;
+    list-style-type: '\2714\00A0\00A0';
+    margin: 10px 0;
+}
+.column ul li {
+    font-size: .9em;
+}
+
+/*---- SECTION SERVICES ----*/
+.services {
+    padding-top: 100px;
+}
+.services h1 {
+    margin-bottom: 30px;
+}
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.col-3 h2 {
+    font-size: .9em;
+    margin: 5px 0;
+}
+.col-3 p {
+    color: rgb(36, 35, 35);
+    font-weight: normal;
+    font-size: .9em;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+.col-3 img {
+    width: 100%;
+}
+
+/*---- SECTION TESTMONIALS ----*/
+.testmonials {
+    padding-top: 100px;
+}
+.testmonials h1 {
+    margin-bottom: 50px;
+}
+.col-sm-3 {
+    flex-basis: 30%;
+    display: flex;
+    min-width: 250px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    transition: transform .5s;
+}
+.col-sm-3:hover {
+    transform: translateY(-3px);
+}
+.col-sm-3 p {
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 13px;
+    color: rgb(102, 99, 99);
+}
+.col-sm-3 h2 {
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 7px;
+}
+.col-sm-3 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.row-expanded {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*--- SECTION CONTACT ---*/
+.contact {
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px 0;
+    background-color: var(--color-Blue);
+    color: white;
+}
+.contact-1 {
+    max-width: 500px;
+}
+.contact-1 h1 {
+    margin-bottom: 30px;
+}
+.contact-1 p {
+    color: rgba(245, 245, 245, 0.856);
+    margin-bottom: 30px;
+}
+.contact-2 h2 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.contact-2 span {
+    color: white;
+    margin-top: 20px;
+    display: inline-table;
+}
+.contact-2 p, address {
+    color: rgb(161, 157, 157);
+    margin: 5px 0;
+}
+/*.form {
+    flex: 1;
+    min-width: 400px;
+}*/
+form input {
+    padding: 5px 10px;
+    font-size: 1em;
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+    outline: none;
+    border: 1px solid white;
+}
+.message {
+    width: 404px;
+    height: 100px;
+    display: block;
+    flex: 1;
+}
+.btn-send {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 10px 25px;
+    margin: 20px 0;
+    transition-duration: 1s;
+}
+.btn-send:hover {
+    background-color: var(--color-RED);
+    border: 2px solid var(--color-RED);
+}
+
+/*--- FOOTER ---*/
+footer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: none;
+}
+@media only screen and (max-width: 900px) {
+    .col-2 {
+        flex-basis: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    nav ul {
+        position: absolute;
+        top: 36px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 100;
+        transition: max-height .5s;
+        overflow: hidden;
+    }
+    nav ul li {
+        display: block;
+        margin: 10PX 50PX 10px 0;
+    }
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .row {
+        text-align: center;
+    }
+    .col-2, .col-3, .col-sm-3 {
+        flex-basis: 100%;
+    }
+    form input {
+        width: 100%;
+    }
+    .message {
+        width: 100%;
+    }
+}
